@@ -14,7 +14,8 @@
   </head>
   <body>
     <p>Todo application</p>
-    <g:form controller="index" action="formTest">
+    <g:renderErrors bean="${errorTodo}" as="list" field="todoName"/>
+    <g:form controller="index" action="save">
       <g:textField name="todo" />
       <g:submitButton name="add-todo">Add Todo</g:submitButton>
     </g:form>
